@@ -1,0 +1,11 @@
+@Binding var image: UIImage?
+    @Binding var showScreen: Bool
+    
+    func makeUIViewController(context: Context) -> UIImagePickerController  {
+        let vc = UIImagePickerController()
+        vc.allowsEditing = false
+        vc.delegate = context.coordinator
+        return vc
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
